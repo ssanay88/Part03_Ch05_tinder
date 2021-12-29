@@ -26,6 +26,9 @@ class MainActivity : AppCompatActivity() {
         // 로그인한 정보가 없을 경우 로그인 액티비티로 이동
         if (auth.currentUser == null) {
             startActivity(Intent(this,LoginActivity::class.java))
+        } else {
+            // 로그인이 된 상태면 LikeActivity로 이동
+            startActivity(Intent(this,LikeActivity::class.java))
         }
     }
 

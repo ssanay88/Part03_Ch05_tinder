@@ -41,6 +41,15 @@
         app:layout_constraintEnd_toStartOf="@id/loginBtn"
         app:layout_constraintTop_toBottomOf="@id/passwordEditText" />
 
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/facebookLogInBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loginBtn" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 
     <!--
