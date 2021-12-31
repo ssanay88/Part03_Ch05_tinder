@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    // Activit가 onStart() 메서드를 호출하면 로그인 유무를 판단하여 로그인 화면 혹은 카드 선택화면으로 이동
     override fun onStart() {
         super.onStart()
 
@@ -29,6 +30,7 @@ class MainActivity : AppCompatActivity() {
         } else {
             // 로그인이 된 상태면 LikeActivity로 이동
             startActivity(Intent(this,LikeActivity::class.java))
+            finish()    // LikeActivity에서 나오고 싶을 경우 다시 돌아가는 것 방지
         }
     }
 

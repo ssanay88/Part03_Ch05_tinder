@@ -18,9 +18,9 @@ import com.google.firebase.ktx.Firebase
 
 class LoginActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityLoginBinding
-    private lateinit var auth: FirebaseAuth
-    private lateinit var callbackManager: CallbackManager
+    private lateinit var binding: ActivityLoginBinding    // 뷰 바인딩
+    private lateinit var auth: FirebaseAuth    // Firebase 로그인을 위한 선언
+    private lateinit var callbackManager: CallbackManager    // 페이스북 로그인에서 액티비티 요청에 대한 결과를 받을 때 사용
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,10 +32,10 @@ class LoginActivity : AppCompatActivity() {
         callbackManager = CallbackManager.Factory.create()
 
 
-        initLogInBtn()
-        initSignUpBtn()
-        initEmailAndPasswordEditText()
-        initFacebookLogInBtn()
+        initLogInBtn()    // 로그인 버튼 클릭 시
+        initSignUpBtn()    // 회원 가입 버튼 클릭 시
+        initEmailAndPasswordEditText()    // 이메일 혹은 비밀번호가 없을 경우 버튼 비활성화 확인 메서드
+        initFacebookLogInBtn()    // 페이스북 로그인 버튼 클릭 시
 
     }
 
@@ -106,6 +106,7 @@ class LoginActivity : AppCompatActivity() {
     private fun initFacebookLogInBtn() {
         // 로그인 버튼 클릭 시 유저에게 받아올 정보들을 선언 , email과 공개 정보들을 가져온다.
         binding.facebookLogInBtn.setPermissions("email" , "public_profile")
+        // LoginResult를 콜백하는 메서드
         binding.facebookLogInBtn.registerCallback(callbackManager, object : FacebookCallback<LoginResult> {
 
             // 성공적인 로그인

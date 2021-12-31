@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Part03_Ch05_tinder">
         <activity
+            android:name=".MatchedUserActivity"
+            android:exported="false" />
+        <activity
             android:name=".LikeActivity"
             android:exported="false" />
         <activity
